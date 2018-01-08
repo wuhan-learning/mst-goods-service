@@ -20,15 +20,6 @@ public class JWTAuthRepositoryImpl implements TokenAuthRepository {
     private long expirationInSeconds;
 
     @Override
-    public String generateToken(Map<String, Object> payload) {
-        return Jwts.builder()
-                .setClaims(payload)
-                .setExpiration(new Date(System.currentTimeMillis() + expirationInSeconds * 1000))
-                .signWith(SignatureAlgorithm.HS512, jwtSecret)
-                .compact();
-    }
-
-    @Override
     public String extractAuthorizedPayload(String jwtToken) {
         return StringUtils.writeObjectAsJsonString(Jwts.parser().setSigningKey(jwtSecret)
                 .parseClaimsJws(jwtToken)
