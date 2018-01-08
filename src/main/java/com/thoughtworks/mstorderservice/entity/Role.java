@@ -9,11 +9,9 @@ import java.util.List;
 
 @Setter
 @Getter
-@Entity
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "t_role")
 public class Role implements Serializable {
 
     public enum Symbol {
