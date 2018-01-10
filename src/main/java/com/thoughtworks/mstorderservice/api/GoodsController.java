@@ -1,6 +1,6 @@
 package com.thoughtworks.mstorderservice.api;
 
-import com.thoughtworks.mstorderservice.dto.GoodDTO;
+import com.thoughtworks.mstorderservice.dto.GoodsDTO;
 import com.thoughtworks.mstorderservice.service.GoodService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -20,7 +20,7 @@ public class GoodsController {
 
     @GetMapping
     @ResponseStatus(HttpStatus.OK)
-    public List<GoodDTO> getGoods() {
+    public List<GoodsDTO> getGoods() {
         return goodService.getGoods();
     }
 }

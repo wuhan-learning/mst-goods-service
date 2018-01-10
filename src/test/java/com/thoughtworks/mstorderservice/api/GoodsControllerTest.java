@@ -1,7 +1,7 @@
 package com.thoughtworks.mstorderservice.api;
 
 import com.thoughtworks.mstorderservice.Repository.GoodRepository;
-import com.thoughtworks.mstorderservice.entity.Good;
+import com.thoughtworks.mstorderservice.entity.Goods;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -38,10 +38,10 @@ class GoodsControllerTest {
     @BeforeEach
     void setUp() {
         mockMvc = MockMvcBuilders.webAppContextSetup(this.wac).build();
-        List<Good> goods = Arrays.asList(
-                Good.builder().name("good1").description("good1").build(),
-                Good.builder().name("good2").description("good2").build(),
-                Good.builder().name("good3").description("good3").build()
+        List<Goods> goods = Arrays.asList(
+                Goods.builder().name("good1").description("good1").build(),
+                Goods.builder().name("good2").description("good2").build(),
+                Goods.builder().name("good3").description("good3").build()
         );
         goodRepository.deleteAll();
         goodRepository.save(goods);
