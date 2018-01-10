@@ -7,7 +7,7 @@ import lombok.*;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class GoodDTO {
+public class GoodsDTO {
 
     private String name;
 

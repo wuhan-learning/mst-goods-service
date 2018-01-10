@@ -11,7 +11,7 @@ import javax.persistence.*;
 @NoArgsConstructor
 @Entity
 @Table(name = "t_good")
-public class Good {
+public class Goods {
 
     @Id
     @GeneratedValue
