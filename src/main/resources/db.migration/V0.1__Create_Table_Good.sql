@@ -1,4 +1,4 @@
-CREATE TABLE `t_good` (
+CREATE TABLE `t_goods` (
   `id` INT NOT NULL PRIMARY KEY ,
   `name` VARCHAR(255) NOT NULL ,
   `description` VARCHAR(255) NOT NULL ,
