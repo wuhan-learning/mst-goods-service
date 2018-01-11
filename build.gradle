@@ -55,3 +55,10 @@ dependencies {
     testCompile('org.junit.platform:junit-platform-runner:1.0.2')
     testCompile('com.github.sbrannen:spring-test-junit5:1.0.2')
 }
+
+
+flyway {
+    url = 'jdbc:mysql://127.0.0.1/mst_goods'
+    user = 'root'
+    password = 'dev'
+}
