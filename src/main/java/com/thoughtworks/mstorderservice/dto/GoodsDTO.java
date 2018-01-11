@@ -13,7 +13,7 @@ public class GoodsDTO {
 
     private String description;
 
-    private Double price;
+    private double price;
 
-    private Integer amount;
+    private long amount;
 }

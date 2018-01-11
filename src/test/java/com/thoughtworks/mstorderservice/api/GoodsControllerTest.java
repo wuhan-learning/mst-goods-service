@@ -1,6 +1,6 @@
 package com.thoughtworks.mstorderservice.api;
 
-import com.thoughtworks.mstorderservice.Repository.GoodRepository;
+import com.thoughtworks.mstorderservice.Repository.GoodsRepository;
 import com.thoughtworks.mstorderservice.entity.Goods;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -31,7 +31,7 @@ class GoodsControllerTest {
     private WebApplicationContext wac;
 
     @Autowired
-    private GoodRepository goodRepository;
+    private GoodsRepository goodsRepository;
 
     private MockMvc mockMvc;
 
@@ -43,8 +43,8 @@ class GoodsControllerTest {
                 Goods.builder().name("good2").description("good2").build(),
                 Goods.builder().name("good3").description("good3").build()
         );
-        goodRepository.deleteAll();
-        goodRepository.save(goods);
+        goodsRepository.deleteAll();
+        goodsRepository.save(goods);
     }
 
     @Test

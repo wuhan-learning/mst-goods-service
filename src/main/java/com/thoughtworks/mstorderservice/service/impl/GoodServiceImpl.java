@@ -1,6 +1,6 @@
 package com.thoughtworks.mstorderservice.service.impl;
 
-import com.thoughtworks.mstorderservice.Repository.GoodRepository;
+import com.thoughtworks.mstorderservice.Repository.GoodsRepository;
 import com.thoughtworks.mstorderservice.dto.GoodsDTO;
 import com.thoughtworks.mstorderservice.entity.Goods;
 import com.thoughtworks.mstorderservice.service.GoodService;
@@ -13,11 +13,11 @@ import java.util.stream.Collectors;
 @Service
 public class GoodServiceImpl implements GoodService {
     @Autowired
-    private GoodRepository goodRepository;
+    private GoodsRepository goodsRepository;
 
     @Override
     public List<GoodsDTO> getGoods() {
-        List<Goods> goods = goodRepository.findAll();
+        List<Goods> goods = goodsRepository.findAll();
         return goods.stream()
                 .map(good -> GoodsDTO.builder()
                         .name(good.getName())
