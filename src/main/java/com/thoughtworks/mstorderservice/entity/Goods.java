@@ -22,5 +22,5 @@ public class Goods {
 
     private double price;
 
-    private long amount;
+    private long stockAmount;
 }

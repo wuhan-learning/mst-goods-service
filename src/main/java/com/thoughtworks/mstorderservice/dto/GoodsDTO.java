@@ -8,6 +8,7 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 public class GoodsDTO {
+    private long id;
 
     private String name;
 
@@ -15,5 +16,5 @@ public class GoodsDTO {
 
     private double price;
 
-    private long amount;
+    private long stockAmount;
 }

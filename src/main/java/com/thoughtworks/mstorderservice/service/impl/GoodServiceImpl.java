@@ -21,7 +21,7 @@ public class GoodServiceImpl implements GoodService {
         return goods.stream()
                 .map(good -> GoodsDTO.builder()
                         .name(good.getName())
-                        .amount(good.getAmount())
+                        .stockAmount(good.getStockAmount())
                         .description(good.getDescription())
                         .price(good.getPrice())
                         .build())
