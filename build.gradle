@@ -38,6 +38,8 @@ dependencyManagement {
 
 dependencies {
     compile('org.springframework.boot:spring-boot-starter-actuator')
+    compile('org.springframework.cloud:spring-cloud-starter-consul-discovery')
+    compile('org.springframework.cloud:spring-cloud-starter-feign')
     compile('org.springframework.boot:spring-boot-starter-security')
     compile('org.springframework.boot:spring-boot-starter-web')
     compile('org.springframework.boot:spring-boot-starter-data-jpa')
@@ -50,11 +52,6 @@ dependencies {
     compile('org.projectlombok:lombok:1.16.14')
     compile('io.jsonwebtoken:jjwt:0.7.0')
     compile('net.logstash.logback:logstash-logback-encoder:4.9')
-
-    compile('org.springframework.boot:spring-boot-starter-actuator')
-    compile('org.springframework.cloud:spring-cloud-starter-consul-discovery')
-
-    compile('org.springframework.cloud:spring-cloud-starter-feign')
 
     testCompile('org.springframework.boot:spring-boot-starter-test')
     testCompile('org.springframework.security:spring-security-test')

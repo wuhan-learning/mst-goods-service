@@ -1,4 +1,4 @@
-package com.thoughtworks.mstorderservice.Repository;
+package com.thoughtworks.mstorderservice.repository;
 
 import com.thoughtworks.mstorderservice.entity.Goods;
 import org.springframework.data.jpa.repository.JpaRepository;

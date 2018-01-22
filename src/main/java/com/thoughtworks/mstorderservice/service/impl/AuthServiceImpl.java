@@ -1,6 +1,6 @@
 package com.thoughtworks.mstorderservice.service.impl;
 
-import com.thoughtworks.mstorderservice.Repository.TokenAuthRepository;
+import com.thoughtworks.mstorderservice.repository.TokenAuthRepository;
 import com.thoughtworks.mstorderservice.configuration.security.JWTUser;
 import com.thoughtworks.mstorderservice.exception.InvalidCredentialException;
 import com.thoughtworks.mstorderservice.service.AuthService;

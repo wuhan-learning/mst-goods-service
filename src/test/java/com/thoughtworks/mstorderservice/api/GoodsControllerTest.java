@@ -1,6 +1,6 @@
 package com.thoughtworks.mstorderservice.api;
 
-import com.thoughtworks.mstorderservice.Repository.GoodsRepository;
+import com.thoughtworks.mstorderservice.repository.GoodsRepository;
 import com.thoughtworks.mstorderservice.entity.Goods;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

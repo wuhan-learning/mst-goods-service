@@ -1,6 +1,6 @@
 package com.thoughtworks.mstorderservice.service.impl;
 
-import com.thoughtworks.mstorderservice.Repository.GoodsRepository;
+import com.thoughtworks.mstorderservice.repository.GoodsRepository;
 import com.thoughtworks.mstorderservice.dto.GoodsDTO;
 import com.thoughtworks.mstorderservice.entity.Goods;
 import com.thoughtworks.mstorderservice.service.GoodService;
