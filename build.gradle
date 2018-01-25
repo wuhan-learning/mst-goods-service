@@ -73,7 +73,3 @@ flyway {
     user = 'root'
     password = 'dev'
 }
-
-test{
-    systemProperty('spring.profiles.active', 'test')
-}
