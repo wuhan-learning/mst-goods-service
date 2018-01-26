@@ -1,12 +1,18 @@
 package com.thoughtworks.mstorderservice.api;
 
-import com.thoughtworks.mstorderservice.MstGoodsServiceApplicationTests;
+import com.thoughtworks.mstorderservice.MstGoodsServiceApplication;
 import com.thoughtworks.mstorderservice.entity.Goods;
 import com.thoughtworks.mstorderservice.repository.GoodsRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.MediaType;
+import org.springframework.test.context.ActiveProfiles;
+import org.springframework.test.context.junit.jupiter.SpringExtension;
+import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.context.WebApplicationContext;
@@ -19,7 +25,10 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
-class GoodsControllerTest extends MstGoodsServiceApplicationTests {
+@ExtendWith(SpringExtension.class)
+@SpringBootTest
+@ActiveProfiles("test")
+class GoodsControllerTest {
 
     @Autowired
     private WebApplicationContext wac;
@@ -30,8 +39,8 @@ class GoodsControllerTest extends MstGoodsServiceApplicationTests {
     private MockMvc mockMvc;
 
     @BeforeEach
-    void setUp() {
-        mockMvc = MockMvcBuilders.webAppContextSetup(this.wac).build();
+    public void setup() {
+        mockMvc = MockMvcBuilders.webAppContextSetup(wac).build();
         List<Goods> goods = Arrays.asList(
                 Goods.builder().name("good1").description("good1").build(),
                 Goods.builder().name("good2").description("good2").build(),

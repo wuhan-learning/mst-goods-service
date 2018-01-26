@@ -4,6 +4,6 @@ import com.thoughtworks.mstorderservice.dto.GoodsDTO;
 
 import java.util.List;
 
-public interface GoodService {
+public interface GoodsService {
     List<GoodsDTO> getGoods();
 }
