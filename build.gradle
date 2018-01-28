@@ -96,11 +96,17 @@ publishing {
         stubs(MavenPublication) {
             groupId 'com.thoughtworks'
             artifactId "mst-goods-service"
-            version '0.0.1'
+            version '0.0.55'
             artifact verifierStubsJar
         }
     }
     repositories {
-        mavenLocal()
+        maven {
+            credentials {
+                username "admin"
+                password "admin123"
+            }
+            url = "http://10.202.129.3:8081/repository/mst-maven/"
+        }
     }
 }
