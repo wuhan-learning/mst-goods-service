@@ -13,11 +13,17 @@ Contract.make {
         headers {
             contentType applicationJson()
         }
-        body([
-                id   : 1,
-                name : "iPhone SE2",
-                price: 2095
-        ])
-
+        body '''
+            [{
+                "id"   : 1,
+                "name" : "iPhone SE2",
+                "price": 2095
+            },
+            {
+                "id"   : 2,
+                "name" : "iPhone X",
+                "price": 5095
+            }]
+        '''
     }
 }

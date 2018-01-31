@@ -14,6 +14,7 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import java.util.Arrays;
 import java.util.Collections;
 
 @RunWith(SpringRunner.class)
@@ -29,7 +30,8 @@ public class ContractVerifierBase {
     @Before
     public void setup() throws Exception {
         RestAssuredMockMvc.standaloneSetup(goodsController);
-        GoodsDTO goodsDTO = GoodsDTO.builder().id(1).name("iPhone SE2").price(2095).build();
-        Mockito.when(goodsService.getGoods()).thenReturn(Collections.singletonList(goodsDTO));
+        GoodsDTO goodsDTO1 = GoodsDTO.builder().id(1).name("iPhone SE2").price(2095).build();
+        GoodsDTO goodsDTO2 = GoodsDTO.builder().id(2).name("iPhone X").price(5095).build();
+        Mockito.when(goodsService.getGoods()).thenReturn(Arrays.asList(goodsDTO1,goodsDTO2));
     }
 }

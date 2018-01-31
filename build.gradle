@@ -96,7 +96,7 @@ publishing {
         stubs(MavenPublication) {
             groupId 'com.thoughtworks'
             artifactId "mst-goods-service"
-            version '0.0.55'
+            version '0.0.1'
             artifact verifierStubsJar
         }
     }
